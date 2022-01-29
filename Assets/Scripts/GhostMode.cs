@@ -7,7 +7,13 @@ public class GhostMode : MonoBehaviour
     [SerializeField] GameObject Player;
     [SerializeField] GameObject Ghost;
     private bool _ghostMode = false;
- 
+    public float ghostTime = 10f;
+    private float _ghostTime;
+
+    private void Awake()
+    {
+        _ghostTime = ghostTime;
+    }
     private void ToggleGhostMode()
     {
         if (!_ghostMode == true)    // Sets the ghost active and swaps controls to it from the normal player
@@ -15,6 +21,7 @@ public class GhostMode : MonoBehaviour
             Ghost.SetActive(true);
             Player.GetComponent<PlayerController>().enabled = false;
             Player.GetComponentInChildren<AudioListener>().enabled = false;
+            
         }
         else
         {
@@ -30,10 +37,24 @@ public class GhostMode : MonoBehaviour
 
     void Update()
     {
+        if (_ghostMode == true)
+        {
+           // _ghostTime = ghostTime;
+            Debug.Log("Ghost time " + _ghostTime);
+            _ghostTime -= Time.deltaTime;
+            if (_ghostTime <= 0.0f)
+            {
+                Debug.Log("Ghost time ended");
+                ToggleGhostMode();
+                _ghostTime = ghostTime;
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
             ToggleGhostMode();
+            _ghostTime = ghostTime;
+            
         }
     }
 }

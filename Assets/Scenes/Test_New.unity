@@ -1710,6 +1710,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8487645996369009185, guid: 9deb3514037ae1840bd7dce89afca5fa, type: 3}
+      propertyPath: ghostTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8487645996369009191, guid: 9deb3514037ae1840bd7dce89afca5fa, type: 3}
       propertyPath: m_RootOrder
       value: 2

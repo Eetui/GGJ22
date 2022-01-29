@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
         
         if (sound == null) 
         {
-            Debug.LogWarning($"No sound with name {soundName}");
+            Debug.LogError($"No sound with name {soundName}");
             return;
         }
 
@@ -54,6 +54,13 @@ public class AudioManager : MonoBehaviourSingleton<AudioManager>
     public void ChangePitch(string soundName, float pitch = 1f)
     {
         var sound = Array.Find(sounds, sound => sound.Name == soundName);
+        
+        if (sound == null) 
+        {
+            Debug.LogError($"No sound with name {soundName}");
+            return;
+        }
+        
         sound.Source.pitch = pitch;
     }
 }

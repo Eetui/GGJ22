@@ -46,9 +46,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   sounds:
-  - Name: Music1
-    AudioClip: {fileID: 8300000, guid: 87510d613fd3c4443a180f6dd001e283, type: 3}
+  - Name: Music
+    AudioClip: {fileID: 8300000, guid: a682f8d438328704fbb84dc0814e10a7, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+  - Name: PotionGrab
+    AudioClip: {fileID: 8300000, guid: e5e855a6bdfcc7e43a352444fe2043f5, type: 3}
     volume: 0.5
+    pitch: 1
+    loop: 0
+  - Name: GhostOff
+    AudioClip: {fileID: 8300000, guid: 742264031bfa1104bac41b4742b1c7ec, type: 3}
+    volume: 0.5
+    pitch: 0.8
+    loop: 0
+  - Name: Drink
+    AudioClip: {fileID: 8300000, guid: 332445020c9b26548aa3c4881892fcf5, type: 3}
+    volume: 0.2
     pitch: 1
     loop: 0
 --- !u!114 &9091672614262596132

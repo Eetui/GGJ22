@@ -9,7 +9,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (hasInteracted) return;
-        Debug.Log("Boom");
+
         OnInteraction.Invoke();
         hasInteracted = true;
     }

@@ -9,17 +9,13 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (canInteract && Input.GetKeyDown(KeyCode.E)) 
         {
-            
             if (interactable == null) return;
-            Debug.Log("Update yes");
             interactable.Interact();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Kosketus");
-        
         if (other.TryGetComponent(out IInteractable _interactable)) 
         {
             interactable = _interactable;

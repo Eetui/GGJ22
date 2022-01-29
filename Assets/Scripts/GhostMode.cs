@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GhostMode : MonoBehaviour
@@ -17,20 +15,24 @@ public class GhostMode : MonoBehaviour
     }
     private void ToggleGhostMode()
     {
-        if (!_ghostMode == true)    // Sets the ghost active and swaps controls to it from the normal player
+        if (!_ghostMode == true && GameManager.Instance.IsPotionPicked)    // Sets the ghost active and swaps controls to it from the normal player
         {
             Ghost.SetActive(true);
             Player.GetComponent<PlayerController>().enabled = false;
             CameraController.Instance.SetFollowTarget(Ghost.transform);
+            AudioManager.Instance.ChangePitch("Music", 0.3f);
+            AudioManager.Instance.Play("Drink");
 
         }
-        else
+        else if (_ghostMode && GameManager.Instance.IsPotionPicked)
         {
             // Disables the ghost, moves it to player and transfers controls back to normal body
             Ghost.SetActive(false);
             Player.GetComponent<PlayerController>().enabled = true;
             Ghost.transform.position = Player.transform.position;
             CameraController.Instance.SetFollowTarget(Player.transform);
+            AudioManager.Instance.ChangePitch("Music");
+            AudioManager.Instance.Play("GhostOff");
         }
         _ghostMode = !_ghostMode;
     }

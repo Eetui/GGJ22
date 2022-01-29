@@ -32302,14 +32302,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraController
       objectReference: {fileID: 0}
-    - target: {fileID: 7882169736544353204, guid: c2761734f88f3f2438bd06bf12ea55ac, type: 3}
-      propertyPath: m_LookaheadTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7882169736544353204, guid: c2761734f88f3f2438bd06bf12ea55ac, type: 3}
-      propertyPath: m_LookaheadSmoothing
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2761734f88f3f2438bd06bf12ea55ac, type: 3}
 --- !u!1001 &8660762285381909009

@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded) hasJumped = false;
     }
+    private void OnDisable()
+    {
+        rb.velocity = Vector2.zero;
+    }
 
     private void FixedUpdate()
     {

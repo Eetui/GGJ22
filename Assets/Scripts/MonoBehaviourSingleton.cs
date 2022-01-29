@@ -1,5 +1,4 @@
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
 {
@@ -22,7 +21,7 @@ public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
     }
     
     private static T instance;
-    
+    [SerializeField] internal bool dontDestroyOnLoad;
 
     public virtual void Awake()
     {
@@ -36,6 +35,11 @@ public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
             Destroy(gameObject);
         }
 
+        if (dontDestroyOnLoad) 
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
         OnAwake();
     }
 
@@ -46,7 +50,7 @@ public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
 
     public void OnDestroy()
     {
-        Debug.Log($"Manager {name}");
+        Debug.Log($"Destroyed singleton {name}");
         Destroy(gameObject);
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9091672614262596134}
   - component: {fileID: 9091672614262596132}
   m_Layer: 0
-  m_Name: AudioController
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74aa1fa5a20c40c492dc0e3f98ae640f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
   sounds:
   - Name: Music1
     AudioClip: {fileID: 8300000, guid: 87510d613fd3c4443a180f6dd001e283, type: 3}

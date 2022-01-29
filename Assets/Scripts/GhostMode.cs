@@ -40,7 +40,7 @@ public class GhostMode : MonoBehaviour
         if (_ghostMode == true)
         {
            // _ghostTime = ghostTime;
-            Debug.Log("Ghost time " + _ghostTime);
+
             _ghostTime -= Time.deltaTime;
             if (_ghostTime <= 0.0f)
             {

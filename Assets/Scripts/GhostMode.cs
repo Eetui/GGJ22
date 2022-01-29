@@ -13,7 +13,6 @@ public class GhostMode : MonoBehaviour
         if (!_ghostMode == true)    // Sets the ghost active and swaps controls to it from the normal player
         {
             Ghost.SetActive(true);
-            Ghost.GetComponent<PlayerController>().enabled = true;
             Player.GetComponent<PlayerController>().enabled = false;
             Player.GetComponentInChildren<AudioListener>().enabled = false;
         }
@@ -21,7 +20,6 @@ public class GhostMode : MonoBehaviour
         {
             // Disables the ghost, moves it to player and transfers controls back to normal body
             Ghost.SetActive(false);
-            Ghost.GetComponent<PlayerController>().enabled = false;
             Player.GetComponent<PlayerController>().enabled = true;
             Player.GetComponentInChildren<AudioListener>().enabled = true;
             Ghost.transform.position = Player.transform.position;

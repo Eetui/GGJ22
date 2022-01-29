@@ -13,6 +13,7 @@ public class GhostMode : MonoBehaviour
     private void Awake()
     {
         _ghostTime = ghostTime;
+        CameraController.Instance.SetFollowTarget(Player.transform);
     }
     private void ToggleGhostMode()
     {
@@ -20,16 +21,16 @@ public class GhostMode : MonoBehaviour
         {
             Ghost.SetActive(true);
             Player.GetComponent<PlayerController>().enabled = false;
-            Player.GetComponentInChildren<AudioListener>().enabled = false;
-            
+            CameraController.Instance.SetFollowTarget(Ghost.transform);
+
         }
         else
         {
             // Disables the ghost, moves it to player and transfers controls back to normal body
             Ghost.SetActive(false);
             Player.GetComponent<PlayerController>().enabled = true;
-            Player.GetComponentInChildren<AudioListener>().enabled = true;
             Ghost.transform.position = Player.transform.position;
+            CameraController.Instance.SetFollowTarget(Player.transform);
         }
         _ghostMode = !_ghostMode;
     }
@@ -40,7 +41,7 @@ public class GhostMode : MonoBehaviour
         if (_ghostMode == true)
         {
            // _ghostTime = ghostTime;
-            Debug.Log("Ghost time " + _ghostTime);
+
             _ghostTime -= Time.deltaTime;
             if (_ghostTime <= 0.0f)
             {

@@ -241,14 +241,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
       propertyPath: sounds.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
       propertyPath: sounds.Array.data[1].Name
       value: PotionGrab
       objectReference: {fileID: 0}
     - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
+      propertyPath: sounds.Array.data[2].Name
+      value: GhostSwoosh
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
       propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
@@ -256,9 +264,17 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
       propertyPath: sounds.Array.data[1].AudioClip
       value: 
       objectReference: {fileID: 8300000, guid: ddaf238d585d015439e4c1b83aef02ec, type: 3}
+    - target: {fileID: 9091672614262596134, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
+      propertyPath: sounds.Array.data[2].AudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a74f971e0bd60744a86a079cd7e44fc4, type: 3}
     - target: {fileID: 9091672614262596135, guid: e6b96bb2937f2b740bf93d78b4cae668, type: 3}
       propertyPath: m_RootOrder
       value: 16

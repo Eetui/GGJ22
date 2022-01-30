@@ -566,7 +566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3471050082976319595, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3471050082976319595, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,15 +610,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
       propertyPath: m_Color.b
-      value: 0.39398363
+      value: 0.04705882
       objectReference: {fileID: 0}
     - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
       propertyPath: m_Color.g
-      value: 0.7752047
+      value: 0.64321643
       objectReference: {fileID: 0}
     - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
       propertyPath: m_Color.r
-      value: 0.9622642
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0.485
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0.233
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 335
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317663531988444913, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 499838ad91bd61641995e2ac79e00e10, type: 3}
@@ -33511,7 +33539,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2300753788399627150, guid: c2761734f88f3f2438bd06bf12ea55ac, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2300753788399627150, guid: c2761734f88f3f2438bd06bf12ea55ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33843,7 +33871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1800591696607535177, guid: a05f62935b6227f4a8fd5db33b136e3c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1800591696607535177, guid: a05f62935b6227f4a8fd5db33b136e3c, type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7877658146764766369}
   - component: {fileID: 1894043194617534672}
   - component: {fileID: 1894043194617534673}
+  - component: {fileID: 6085489744225647758}
   m_Layer: 0
   m_Name: NextSceneDoor
   m_TagString: Untagged
@@ -48,8 +49,8 @@ MonoBehaviour:
   OnEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 6085489744225647758}
+        m_TargetAssemblyTypeName: GameManagerAction, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
@@ -140,3 +141,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6085489744225647758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877658146764766374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c84c15656e74a0eaf273a2b74e2df0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

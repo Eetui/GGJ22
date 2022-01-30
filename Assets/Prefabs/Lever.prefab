@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2176037298582598232}
   - component: {fileID: 6538419846705778183}
   - component: {fileID: 7767150239301311534}
+  - component: {fileID: 8125099389411666494}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -367174117
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 03b32e2a16664d647a06d5e6cf47e2f0, type: 3}
+  m_Sprite: {fileID: 1694985531360637023, guid: f4d6c28439b6f084f800255a90aeec66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -137,3 +138,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8125099389411666494}
+        m_TargetAssemblyTypeName: SoundAction, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Door
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8125099389411666494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8141710100374712189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8dc2b837c455740bd14c43a108623f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

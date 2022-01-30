@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class GhostMode : MonoBehaviour
 {
+    [SerializeField] private Animator playerAnim;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject Ghost;
     private bool _ghostMode = false;
     public float ghostTime = 10f;
     private float _ghostTime;
 
-    private void Awake()
+    private void Start()
     {
         _ghostTime = ghostTime;
         CameraController.Instance.SetFollowTarget(Player.transform);
@@ -24,6 +25,7 @@ public class GhostMode : MonoBehaviour
             CameraController.Instance.SetFollowTarget(Ghost.transform);
             AudioManager.Instance.ChangePitch("Music", 0.3f);
             AudioManager.Instance.Play("Drink");
+            playerAnim.SetBool("GhostMode", true);
 
         }
         else
@@ -35,6 +37,7 @@ public class GhostMode : MonoBehaviour
             CameraController.Instance.SetFollowTarget(Player.transform);
             AudioManager.Instance.ChangePitch("Music");
             AudioManager.Instance.Play("GhostOff");
+            playerAnim.SetBool("GhostMode", false);
         }
         _ghostMode = !_ghostMode;
     }

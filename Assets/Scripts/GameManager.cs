@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         SceneManager.sceneLoaded += FadeIn;
         
         FadeIn(SceneManager.GetActiveScene());
+
+        if (SceneManager.GetActiveScene().buildIndex != 0) IsPotionPicked = true;
     }
 
     private void FadeIn(Scene arg0, LoadSceneMode arg1 = LoadSceneMode.Additive)

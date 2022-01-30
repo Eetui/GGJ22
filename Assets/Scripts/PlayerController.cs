@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private Animator anim;
+    
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     private Vector2 direction;
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         rb.velocity = Vector2.zero;
+        anim.SetFloat("Speed",0f);
     }
 
     private void FixedUpdate()
@@ -83,7 +87,10 @@ public class PlayerController : MonoBehaviour
 
 
     private void Jump()
-    {        
+    {   
+        anim.SetTrigger("Jump");
+        anim.SetBool("IsGrounded", false);
+        
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
@@ -93,8 +100,19 @@ public class PlayerController : MonoBehaviour
     
     private void Move()
     {
-        direction.y = rb.velocity.y;
+        var vel = rb.velocity;
+        direction.y = vel.y;
         rb.velocity = direction;
+        anim.SetFloat("Speed", Mathf.Abs(vel.x));
+
+        if (vel.x < -0.1) 
+        {
+            sr.flipX = true;
+        }
+        else if(vel.x > 0.1)
+        {
+            sr.flipX = false;
+        }
     }
     
     private void CheckIfGrounded()
@@ -115,6 +133,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             isGrounded = false;
-        }  
+        } 
+        
+        anim.SetBool("IsGrounded", isGrounded);
     }
 }

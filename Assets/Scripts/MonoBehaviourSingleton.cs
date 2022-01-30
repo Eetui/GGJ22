@@ -28,7 +28,6 @@ public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
         if (instance == null) 
         {
             instance = this as T;
-            
         }
         else 
         {

@@ -26,11 +26,9 @@ public class GhostMode : MonoBehaviour
             AudioManager.Instance.ChangePitch("Music", 0.3f);
             AudioManager.Instance.Play("Drink");
             playerAnim.SetBool("GhostMode", true);
-
         }
-        else
+        else  // Disables the ghost, moves it to player and transfers controls back to normal body
         {
-            // Disables the ghost, moves it to player and transfers controls back to normal body
             Ghost.SetActive(false);
             Player.GetComponent<PlayerController>().enabled = true;
             Ghost.transform.position = Player.transform.position;
@@ -47,8 +45,6 @@ public class GhostMode : MonoBehaviour
     {
         if (_ghostMode == true)
         {
-           // _ghostTime = ghostTime;
-
             _ghostTime -= Time.deltaTime;
             if (_ghostTime <= 0.0f)
             {
@@ -62,7 +58,6 @@ public class GhostMode : MonoBehaviour
         {
             ToggleGhostMode();
             _ghostTime = ghostTime;
-            
         }
     }
 }

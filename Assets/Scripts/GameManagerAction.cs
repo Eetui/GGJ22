@@ -13,4 +13,9 @@ public class GameManagerAction : MonoBehaviour
     {
         gm.NextScene();
     }
+
+    public void Quit()
+    {
+        gm.Quit();
+    }
 }

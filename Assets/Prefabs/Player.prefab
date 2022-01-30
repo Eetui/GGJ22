@@ -299,7 +299,7 @@ MonoBehaviour:
   playerAnim: {fileID: 1450149806}
   Player: {fileID: 8487645996369009195}
   Ghost: {fileID: 8487645995663860371}
-  ghostTime: 10
+  ghostTime: 6
 --- !u!114 &1357066337
 MonoBehaviour:
   m_ObjectHideFlags: 0

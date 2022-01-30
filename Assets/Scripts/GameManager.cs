@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         
         FadeIn(SceneManager.GetActiveScene());
 
-        if (SceneManager.GetActiveScene().buildIndex != 0) IsPotionPicked = true;
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1) IsPotionPicked = true;
     }
 
     private void FadeIn(Scene arg0, LoadSceneMode arg1 = LoadSceneMode.Additive)
@@ -34,11 +34,15 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 
     private void FadeOut(Action callback)
     {
-        var playerMovement = FindObjectOfType<PlayerController>();
-        var ghostMode = FindObjectOfType<GhostMode>();
-        playerMovement.enabled = false;
-        ghostMode.enabled = false;
-        
+        if (SceneManager.GetActiveScene().buildIndex != 0) 
+        {
+            
+            var playerMovement = FindObjectOfType<PlayerController>();
+            var ghostMode = FindObjectOfType<GhostMode>();
+            playerMovement.enabled = false;
+            ghostMode.enabled = false;
+        }
+
         imageFade.FadeOut(2f, callback);
     }
 
@@ -55,6 +59,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         callback?.Invoke();
     }
 
-
-
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

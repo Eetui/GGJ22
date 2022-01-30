@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 
     private void FadeIn(Scene arg0, LoadSceneMode arg1 = LoadSceneMode.Additive)
     {
-
-        if (imageFade == null) {
+        if (imageFade == null) 
+        {
             Wait(0.1f, () => imageFade.FadeIn(2f));
         }
         else 

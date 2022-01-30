@@ -32,7 +32,9 @@ public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
         }
         else 
         {
+            Debug.Log($"Destroyed singleton {name}, because one is already existing and instance wasn't this: {instance != this}");
             Destroy(gameObject);
+            return;
         }
 
         if (dontDestroyOnLoad) 
@@ -46,11 +48,5 @@ public class MonoBehaviourSingleton<T> : MonoBehaviour where T : Component
     internal virtual void OnAwake()
     {
         
-    }
-
-    public void OnDestroy()
-    {
-        Debug.Log($"Destroyed singleton {name}");
-        Destroy(gameObject);
     }
 }

@@ -15,7 +15,9 @@ public class GhostMode : MonoBehaviour
     }
     private void ToggleGhostMode()
     {
-        if (!_ghostMode == true && GameManager.Instance.IsPotionPicked)    // Sets the ghost active and swaps controls to it from the normal player
+        if (!GameManager.Instance.IsPotionPicked) return;
+        
+        if (!_ghostMode == true)    // Sets the ghost active and swaps controls to it from the normal player
         {
             Ghost.SetActive(true);
             Player.GetComponent<PlayerController>().enabled = false;
@@ -24,7 +26,7 @@ public class GhostMode : MonoBehaviour
             AudioManager.Instance.Play("Drink");
 
         }
-        else if (_ghostMode && GameManager.Instance.IsPotionPicked)
+        else
         {
             // Disables the ghost, moves it to player and transfers controls back to normal body
             Ghost.SetActive(false);
